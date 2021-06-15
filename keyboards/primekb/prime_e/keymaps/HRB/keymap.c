@@ -35,8 +35,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case LT(2, KC_ESC):
-      return 80;  // in ms
-      /* return 70;  // in ms */
+      /* return 72;  // in ms */
+      return 70;  // in ms
       /* return 65;  // in ms */
     case LT(3, KC_TAB):
       return 150; // in ms
@@ -59,6 +59,7 @@ bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    // Colemak-dhm
     LAYOUT(
     LT(4, KC_TAB),  KC_Q,     KC_W,     KC_F,     KC_P,     KC_B,             KC_J,     KC_L,     KC_U,    KC_Y,      KC_SCLN,      KC_BSPC,   A(KC_BSPC),
     LT(3, KC_ESC),  KC_A,     KC_R,     KC_S,     KC_T,     KC_G,             KC_M,     KC_N,     KC_E,    KC_I,      KC_O,         KC_ENT,
@@ -66,6 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LCTL,        KC_LALT,                      KC_LCMD,  LT(2, KC_SPACE),  KC_SPACE, KC_RCMD,                      TG_LANG,      KC_CLCK
     ),
 
+    // Qwerty
     LAYOUT(
     KC_TRNS,        KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,             KC_Y,     KC_U,     KC_I,    KC_O,      KC_P,         KC_TRNS,   KC_TRNS,
     KC_TRNS,        KC_A,     KC_S,     KC_D,     KC_F,     KC_G,             KC_H,     KC_J,     KC_K,    KC_L,      KC_SCLN,      KC_TRNS,
@@ -73,6 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS,        KC_TRNS,                      KC_TRNS,  KC_TRNS,          KC_TRNS,  KC_TRNS,                      KC_TRNS,      KC_TRNS
     ),
 
+    // Number, Symbols
     LAYOUT(
     KC_TRNS,        KC_1,     KC_2,     KC_3,     KC_4,     KC_5,             KC_6,     KC_7,     KC_8,    KC_9,      KC_0,         KC_BSPC,   KC_DEL,
     KC_TRNS,        KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_NO,            KC_MINUS, KC_4,     KC_5,    KC_6,      KC_PLUS,      KC_TRNS,
@@ -80,13 +83,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS,        KC_TRNS,                      KC_TRNS,  KC_NO,            KC_0,     KC_TRNS,                      KC_NO,        KC_NO
     ),
 
+    // Symbols for coding.
     LAYOUT(
-    KC_TRNS,        C(KC_Q),  C(KC_W),  C(KC_F),  C(KC_P),  C(KC_B),          KC_NO,    KC_LCBR,  KC_RCBR, KC_UNDS,   KC_COLON,     KC_NO,     KC_NO,
-    KC_TRNS,        C(KC_A),  C(KC_R),  C(KC_S),  C(KC_T),  KC_ESC,           KC_MINUS, KC_LPRN,  KC_RPRN, KC_EQL,    KC_PLUS,      KC_DQUO,
+    KC_TRNS,        C(KC_Q),  C(KC_W),  C(KC_F),  C(KC_P),  C(KC_B),          KC_NO,    KC_LCBR,  KC_RCBR, KC_MINUS,  KC_COLON,     KC_NO,     KC_NO,
+    KC_TRNS,        C(KC_A),  C(KC_R),  C(KC_S),  C(KC_T),  KC_ESC,           KC_UNDS,  KC_LPRN,  KC_RPRN, KC_EQL,    KC_PLUS,      KC_DQUO,
     KC_TRNS,        C(KC_Z),  C(KC_X),  C(KC_C),  C(KC_D),  C(KC_V),          KC_QUOT,  KC_LBRC,  KC_RBRC, KC_LABK,   KC_RABK,      KC_QUES,   KC_NO,
     KC_TRNS,        KC_TRNS,                      KC_TRNS,  KC_TRNS,          KC_TRNS,  KC_TRNS,                      KC_NO,        KC_NO
     ),
 
+    // Navigation
     LAYOUT(
     KC_TRNS,        KC_LSFT,  A(KC_RGHT),KC_NO,   KC_NO,    A(KC_LEFT),       KC_HOME,  KC_PGDN,  KC_PGUP, KC_END,    KC_NO,        KC_NO,     KC_NO,
     KC_TRNS,        KC_LCTL,  KC_LALT,  KC_RCMD,  KC_NO,    KC_ESC,           KC_LEFT,  KC_DOWN,  KC_UP,   KC_RGHT,   KC_TILDE,     KC_GRAVE,
