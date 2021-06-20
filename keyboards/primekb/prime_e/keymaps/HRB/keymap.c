@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Number, Symbols
     LAYOUT(
-    KC_TRNS,        KC_1,     KC_2,     KC_3,     KC_4,     KC_5,             KC_6,     KC_7,     KC_8,    KC_9,      KC_0,         KC_BSPC,   KC_DEL,
+    KC_TRNS,        KC_1,     KC_2,     KC_3,     KC_4,     KC_5,             KC_6,     KC_7,     KC_8,    KC_9,      KC_0,         KC_TRNS,   KC_TRNS,
     KC_TRNS,        KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_NO,            KC_MINUS, KC_4,     KC_5,    KC_6,      KC_PLUS,      KC_TRNS,
     KC_TRNS,        KC_PERC,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_NO,            KC_0,     KC_1,     KC_2,    KC_3,      KC_DOT,       KC_SLSH,   KC_NO,
     KC_TRNS,        KC_TRNS,                      KC_TRNS,  KC_NO,            KC_0,     KC_TRNS,                      KC_NO,        KC_NO
@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Symbols for coding.
     LAYOUT(
-    KC_TRNS,        C(KC_Q),  C(KC_W),  C(KC_F),  C(KC_P),  C(KC_B),          KC_NO,    KC_LCBR,  KC_RCBR, KC_MINUS,  KC_COLON,     KC_NO,     KC_NO,
+    KC_TRNS,        C(KC_Q),  C(KC_W),  C(KC_F),  C(KC_P),  C(KC_B),          KC_NO,    KC_LCBR,  KC_RCBR, KC_MINUS,  KC_COLON,     KC_TRNS,   KC_TRNS,
     KC_TRNS,        C(KC_A),  C(KC_R),  C(KC_S),  C(KC_T),  KC_ESC,           KC_UNDS,  KC_LPRN,  KC_RPRN, KC_EQL,    KC_PLUS,      KC_DQUO,
     KC_TRNS,        C(KC_Z),  C(KC_X),  C(KC_C),  C(KC_D),  C(KC_V),          KC_QUOT,  KC_LBRC,  KC_RBRC, KC_LABK,   KC_RABK,      KC_QUES,   KC_NO,
     KC_TRNS,        KC_TRNS,                      KC_TRNS,  KC_TRNS,          KC_TRNS,  KC_TRNS,                      KC_NO,        KC_NO
